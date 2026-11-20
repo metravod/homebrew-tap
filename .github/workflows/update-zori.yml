@@ -1,0 +1,28 @@
+name: Update Zori
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 6 * * *'
+
+permissions:
+  contents: write
+
+concurrency: update-zori-formula
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update formula from published archives
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 scripts/update-zori.py
+          ruby -c Formula/zori.rb
+          git add Formula/zori.rb
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Update Zori to the latest stable release'
+          git push origin HEAD:main
