@@ -1,28 +1,28 @@
 class Zori < Formula
   desc "Run local CLI coding agents in parallel with YAML flows"
   homepage "https://github.com/metravod/zori"
-  version "0.3.0"
+  version "0.3.1"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/metravod/zori/releases/download/v0.3.0/zori-v0.3.0-aarch64-apple-darwin.tar.gz"
-      sha256 "3744754cc9273cd78d0f43a0e7b00f4e56af90441ae9b3b80018251507abd0bb"
+      url "https://github.com/metravod/zori/releases/download/v0.3.1/zori-v0.3.1-aarch64-apple-darwin.tar.gz"
+      sha256 "3355ce72b8691b1594390df2f0f568c6974c1368d5df3118da21acf156d936f6"
     end
     on_intel do
-      url "https://github.com/metravod/zori/releases/download/v0.3.0/zori-v0.3.0-x86_64-apple-darwin.tar.gz"
-      sha256 "693c51c0d4ac4a60236167f5e39f388da152b139bc42feb2b6f03ef9291db8c9"
+      url "https://github.com/metravod/zori/releases/download/v0.3.1/zori-v0.3.1-x86_64-apple-darwin.tar.gz"
+      sha256 "6e3f24a1541b55a4c9d14af37cf778284956f5e5cddc7dbaf74cab1442e6b597"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/metravod/zori/releases/download/v0.3.0/zori-v0.3.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "087c8eb34d3fab71f834e3008eb6b043b923618d06023c13f0da2925da5dc0b8"
+      url "https://github.com/metravod/zori/releases/download/v0.3.1/zori-v0.3.1-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "33034a08819daf35f6481026e7ce9f62a872e31015bf0f5f5da6c0bfa5b7a01f"
     end
     on_intel do
-      url "https://github.com/metravod/zori/releases/download/v0.3.0/zori-v0.3.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "eaea9fccf9199b2d721959e3db0e959bdbc5676fc471bba3852096fca3a31a31"
+      url "https://github.com/metravod/zori/releases/download/v0.3.1/zori-v0.3.1-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "853eda45ab991910a24452acc1c0e837ea4ed5591b27388eb0909b4496711c7c"
     end
   end
 
